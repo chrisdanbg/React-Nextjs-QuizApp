@@ -1,9 +1,10 @@
-import quizQuestions from '../api/quizQuestions'
 
 import { Component } from "react";
 import Quiz from '../components/quiz';
 import Result from '../components/result';
+import firebase from '../components/firebase';
 
+let quizQuestions = [];
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -20,14 +21,23 @@ class Index extends Component {
 
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     }
-
+    
     componentDidMount() {
-        const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
+        let getData = firebase.firestore().collection('questions').get()
+        .then(snapshot => { 
+            snapshot.forEach((doc) => {
+                quizQuestions.push(doc.data());
+            })
+            const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
         
-        this.setState({
-            question: quizQuestions[0].question,
-            answerOptions: shuffledAnswerOptions[0]
+            this.setState({
+                question: quizQuestions[0].question,
+                answerOptions: shuffledAnswerOptions[0]
+            })
         })
+        .catch(err => {
+            console.log('Error getting document', err);
+        });
     }
 
     shuffleArray(array) {
@@ -126,7 +136,7 @@ class Index extends Component {
                 <div className="App-Header">
                     <h2>React Quiz</h2>
                 </div>
-               {this.state.result ? this.renderResult() : this.renderQuiz()}
+               { this.state.result ? this.renderResult() : this.renderQuiz()}
             </div>
         );
     }

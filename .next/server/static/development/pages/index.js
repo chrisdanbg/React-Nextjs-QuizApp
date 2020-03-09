@@ -93,80 +93,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./api/quizQuestions.js":
-/*!******************************!*\
-  !*** ./api/quizQuestions.js ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var quizQuestions = [{
-  question: "What franchise would you rather play a game from?",
-  answers: [{
-    type: "Microsoft",
-    content: "Halo"
-  }, {
-    type: "Nintendo",
-    content: "Pokemon"
-  }, {
-    type: "Sony",
-    content: "Uncharted"
-  }]
-}, {
-  question: "Which console would you prefer to play with friends?",
-  answers: [{
-    type: "Microsoft",
-    content: "X-Box"
-  }, {
-    type: "Nintendo",
-    content: "Nintendo 64"
-  }, {
-    type: "Sony",
-    content: "Playstation 1"
-  }]
-}, {
-  question: "Which of these racing franchises would you prefer to play a game from?",
-  answers: [{
-    type: "Microsoft",
-    content: "Forza"
-  }, {
-    type: "Nintendo",
-    content: "Mario Kart"
-  }, {
-    type: "Sony",
-    content: "Gran Turismo"
-  }]
-}, {
-  question: "Which of these games do you think is best?",
-  answers: [{
-    type: "Microsoft",
-    content: "BioShock"
-  }, {
-    type: "Nintendo",
-    content: "The Legend of Zelda: Ocarina of Time"
-  }, {
-    type: "Sony",
-    content: "Final Fantasy VII"
-  }]
-}, {
-  question: "What console would you prefer to own?",
-  answers: [{
-    type: "Microsoft",
-    content: "X-Box One"
-  }, {
-    type: "Nintendo",
-    content: "Wii U"
-  }, {
-    type: "Sony",
-    content: "Playstation 4"
-  }]
-}];
-/* harmony default export */ __webpack_exports__["default"] = (quizQuestions);
-
-/***/ }),
-
 /***/ "./components/answerOption.js":
 /*!************************************!*\
   !*** ./components/answerOption.js ***!
@@ -180,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\applynx2\\Desktop\\react-app\\components\\answerOption.js";
+var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\components\\answerOption.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -228,6 +154,31 @@ AnswerOption.propTypes = {
 
 /***/ }),
 
+/***/ "./components/firebase.js":
+/*!********************************!*\
+  !*** ./components/firebase.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase */ "firebase");
+/* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_0__);
+
+const config = {
+  apiKey: "AIzaSyA8ur__JWGUkhRsOFTMhwMLpF785xUp6t4",
+  authDomain: "infant-quiz.firebaseapp.com",
+  databaseURL: "https://infant-quiz.firebaseio.com",
+  projectId: "infant-quiz",
+  storageBucket: "infant-quiz.appspot.com",
+  messagingSenderId: "665997054355"
+};
+/* harmony default export */ __webpack_exports__["default"] = (!firebase__WEBPACK_IMPORTED_MODULE_0__["apps"].length ? firebase__WEBPACK_IMPORTED_MODULE_0__["initializeApp"](config) : firebase__WEBPACK_IMPORTED_MODULE_0__["app"]());
+{}
+
+/***/ }),
+
 /***/ "./components/question.js":
 /*!********************************!*\
   !*** ./components/question.js ***!
@@ -241,7 +192,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\applynx2\\Desktop\\react-app\\components\\question.js";
+var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\components\\question.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -277,7 +228,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\applynx2\\Desktop\\react-app\\components\\questionCount.js";
+var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\components\\questionCount.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -329,7 +280,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _questionCount__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./questionCount */ "./components/questionCount.js");
 /* harmony import */ var _question__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./question */ "./components/question.js");
 /* harmony import */ var _answerOption__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./answerOption */ "./components/answerOption.js");
-var _jsxFileName = "C:\\Users\\applynx2\\Desktop\\react-app\\components\\quiz.js";
+var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\components\\quiz.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -412,7 +363,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\applynx2\\Desktop\\react-app\\components\\result.js";
+var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\components\\result.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -452,10 +403,10 @@ Result.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _api_quizQuestions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api/quizQuestions */ "./api/quizQuestions.js");
-/* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/quiz */ "./components/quiz.js");
-/* harmony import */ var _components_result__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/result */ "./components/result.js");
-var _jsxFileName = "C:\\Users\\applynx2\\Desktop\\react-app\\pages\\index.js";
+/* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/quiz */ "./components/quiz.js");
+/* harmony import */ var _components_result__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/result */ "./components/result.js");
+/* harmony import */ var _components_firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/firebase */ "./components/firebase.js");
+var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -469,6 +420,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+let quizQuestions = [];
 
 class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
@@ -486,10 +438,17 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   componentDidMount() {
-    const shuffledAnswerOptions = _api_quizQuestions__WEBPACK_IMPORTED_MODULE_1__["default"].map(question => this.shuffleArray(question.answers));
-    this.setState({
-      question: _api_quizQuestions__WEBPACK_IMPORTED_MODULE_1__["default"][0].question,
-      answerOptions: shuffledAnswerOptions[0]
+    let getData = _components_firebase__WEBPACK_IMPORTED_MODULE_3__["default"].firestore().collection('questions').get().then(snapshot => {
+      snapshot.forEach(doc => {
+        quizQuestions.push(doc.data());
+      });
+      const shuffledAnswerOptions = quizQuestions.map(question => this.shuffleArray(question.answers));
+      this.setState({
+        question: quizQuestions[0].question,
+        answerOptions: shuffledAnswerOptions[0]
+      });
+    }).catch(err => {
+      console.log('Error getting document', err);
     });
   }
 
@@ -528,8 +487,8 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.setState({
       counter: counter,
       questionId: questionId,
-      question: _api_quizQuestions__WEBPACK_IMPORTED_MODULE_1__["default"][counter].question,
-      answerOptions: _api_quizQuestions__WEBPACK_IMPORTED_MODULE_1__["default"][counter].answers,
+      question: quizQuestions[counter].question,
+      answerOptions: quizQuestions[counter].answers,
       answer: ''
     });
   }
@@ -557,7 +516,7 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
 
-    if (this.state.questionId < _api_quizQuestions__WEBPACK_IMPORTED_MODULE_1__["default"].length) {
+    if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQestion(), 300);
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
@@ -565,27 +524,27 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   renderQuiz() {
-    return __jsx(_components_quiz__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return __jsx(_components_quiz__WEBPACK_IMPORTED_MODULE_1__["default"], {
       answer: this.state.answer,
       answerOptions: this.state.answerOptions,
       questionId: this.state.questionId,
       question: this.state.question,
-      questionTotal: _api_quizQuestions__WEBPACK_IMPORTED_MODULE_1__["default"].length,
+      questionTotal: quizQuestions.length,
       onAnswerSelected: this.handleAnswerSelected,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 116
       },
       __self: this
     });
   }
 
   renderResult() {
-    return __jsx(_components_result__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    return __jsx(_components_result__WEBPACK_IMPORTED_MODULE_2__["default"], {
       quizResult: this.state.result,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 129
       },
       __self: this
     });
@@ -596,20 +555,20 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "App",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 135
       },
       __self: this
     }, __jsx("div", {
       className: "App-Header",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 136
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 137
       },
       __self: this
     }, "React Quiz")), this.state.result ? this.renderResult() : this.renderQuiz());
@@ -628,8 +587,19 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\applynx2\Desktop\react-app\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\Kristiyan\Desktop\React-Nextjs-QuizApp\pages\index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "firebase":
+/*!***************************!*\
+  !*** external "firebase" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("firebase");
 
 /***/ }),
 
