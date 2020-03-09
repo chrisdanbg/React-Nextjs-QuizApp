@@ -1,4 +1,7 @@
 import * as firebase from 'firebase';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+
+
 
 const config = {
     apiKey: process.env.API_KEY,

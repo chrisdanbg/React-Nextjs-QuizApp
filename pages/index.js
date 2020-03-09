@@ -4,6 +4,8 @@ import Quiz from '../components/quiz';
 import Result from '../components/result';
 import firebase from '../components/firebase';
 
+import Link from 'next/link'
+
 let quizQuestions = [];
 class Index extends Component {
     constructor(props) {
@@ -21,7 +23,6 @@ class Index extends Component {
 
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     }
-    
     componentDidMount() {
         let getData = firebase.firestore().collection('questions').get()
         .then(snapshot => { 
@@ -135,6 +136,9 @@ class Index extends Component {
             <div className="App">
                 <div className="App-Header">
                     <h2>React Quiz</h2>
+                    <Link href="/login">
+                        <button>Login</button>
+                    </Link>
                 </div>
                { this.state.result ? this.renderResult() : this.renderQuiz()}
             </div>
