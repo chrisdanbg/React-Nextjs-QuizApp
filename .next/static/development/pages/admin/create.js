@@ -75405,7 +75405,7 @@ function Create() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!********************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fadmin%2Fcreate&absolutePagePath=C%3A%5CUsers%5CKristiyan%5CDesktop%5CReact-Nextjs-QuizApp%5Cpages%5Cadmin%5Ccreate.js ***!
   \********************************************************************************************************************************************************************/
@@ -75428,5 +75428,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=create.js.map
