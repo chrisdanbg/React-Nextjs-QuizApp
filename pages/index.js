@@ -3,9 +3,6 @@ import { Component } from "react";
 import Quiz from '../components/quiz';
 import Result from '../components/result';
 import firebase from '../components/firebase';
-import Auth from '../components/auth';
-
-import Link from 'next/link'
 
 let quizQuestions = [];
 class Index extends Component {
@@ -18,14 +15,13 @@ class Index extends Component {
             question: '',
             answerOptions: [],
             answer: '',
-            answersCount: {},
-            result: ''
+            result: '',
+            correctAnswers: 0
         };
 
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     }
     componentDidMount() {
-        console.log(firebase.auth.currentUser)
 
         let getData = firebase.firestore().collection('questions').get()
         .then(snapshot => { 
@@ -33,9 +29,9 @@ class Index extends Component {
                 quizQuestions.push(doc.data());
             })
             const shuffledAnswerOptions = quizQuestions.map((question) => this.shuffleArray(question.answers));
-        
             this.setState({
                 question: quizQuestions[0].question,
+                image: quizQuestions[0].image,
                 answerOptions: shuffledAnswerOptions[0]
             })
         })
@@ -64,13 +60,13 @@ class Index extends Component {
     };
 
     setUserAnswer(answer) {
-        this.setState((state) => ({
-            answersCount: {
-                ...state.answersCount,
-                [answer]:  (state.answersCount[answer] || 0) + 1 
-            },
-            answer: answer
-        }))
+        if (answer === 'correct') {
+            const counter = this.state.correctAnswers + 1
+
+            this.setState({
+                correctAnswers: counter
+            });
+        }
     }
 
     setNextQestion() {
@@ -81,6 +77,7 @@ class Index extends Component {
             counter: counter,
             questionId: questionId,
             question: quizQuestions[counter].question,
+            image: quizQuestions[counter].image,
             answerOptions: quizQuestions[counter].answers,
             answer: ''
         });
@@ -95,13 +92,14 @@ class Index extends Component {
     }
 
     getResults() {
-        const answersCount = this.state.answersCount;
-        const answerCountKeys = Object.keys(answersCount)
-        const answerCountValues = answerCountKeys.map((key) => answersCount[key]);
+        // const answersCount = this.state.answersCount;
+        // const answerCountKeys = Object.keys(answersCount)
+        // const answerCountValues = answerCountKeys.map((key) => answersCount[key]);
 
-        const maxAnswerCount = Math.max.apply(null, answerCountValues);
+        // const maxAnswerCount = Math.max.apply(null, answerCountValues);
 
-        return answerCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
+        // return answerCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
+        return 1
     }
 
     handleAnswerSelected(event) {
@@ -122,6 +120,7 @@ class Index extends Component {
                 question={this.state.question}
                 questionTotal={quizQuestions.length}
                 onAnswerSelected={this.handleAnswerSelected}
+                image={this.state.image}
             />
         )
     }

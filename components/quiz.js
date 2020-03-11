@@ -24,7 +24,7 @@ function Quiz(props) {
                 counter={props.questionId}
                 total={props.questionTotal}
             />
-            <Question content={props.question}/>
+            <Question content={props.question} image={props.image}/>
             <ul className="answerOptions">
                 {props.answerOptions.map(renderAnswerOptions)}
             </ul>
@@ -33,6 +33,7 @@ function Quiz(props) {
 }
 
 Quiz.propTypes = {
+    image: PropTypes.string.isRequired,
     answer: PropTypes.string.isRequired,
     answerOptions: PropTypes.array.isRequired,
     counter: PropTypes.number.isRequired,

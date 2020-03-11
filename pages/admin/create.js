@@ -25,19 +25,48 @@ function Create() {
         handleValidation();
     }
 
+    const formatQuestion = () => {
+        const answers = [
+            {
+                type: 'correct',
+                content: question.correctAnswer
+            },
+            {
+                type: 'incorrect',
+                content: question.otherAnswer1
+            },
+            {
+                type: 'incorrect',
+                content: question.otherAnswer2
+            },
+            {
+                type: 'incorrect',
+                content: question.otherAnswer3
+            }
+        ];
+
+        return {
+            question: question.title,
+            answers: answers,
+            image: question.imgUrl
+        }
+    }
+
     const handleSubmit = async (e) => {
     
         if (!handleValidation())
             return;
 
-        await firebase.firestore().collection('questionss')
+        let questionToCreate = formatQuestion();
+
+        await firebase.firestore().collection('questions')
             .doc()
-            .set(question)
+            .set(questionToCreate)
             .then(
                 setSubmited(true)
-            ).catch(
-                console.log('Error submiting question to the database.')
-            );
+            ).catch((error) => {
+                console.log(error)
+            });
     }
 
     const handleValidation = () => {

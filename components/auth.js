@@ -1,9 +1,10 @@
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from '../components/firebase';
 import fb from 'firebase'
-import { Component } from 'react';
 import Link from 'next/link';
-import {Container, Navbar, NavbarBrand, Nav, NavDropdown} from 'react-bootstrap';
+import { Component } from 'react';
+import {Container, Navbar, Nav} from 'react-bootstrap';
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+
+import firebase from '../components/firebase';
 
 // Configure FirebaseUI.
 const uiConfig = {
@@ -66,7 +67,7 @@ class Auth extends Component {
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous"
         />
-        
+
         <Navbar bg='light' variant="light">
           <Container>
             <Link href="/">
