@@ -1,19 +1,22 @@
 import Auth from "../../components/auth";
-import {Form, Container,Button} from 'react-bootstrap';
+import {Form, Button} from 'react-bootstrap';
 
 import firebase from '../../components/firebase';
 import { useState } from "react";
 
+import Link from 'next/link'
 
 function Create() {
     
     const [question, setQuestion]  = useState({
         title: '',
+        imgUrl: '',
         correctAnswer: '',
         otherAnswer1: '',
         otherAnswer2: '',
         otherAnswer3: ''
     })
+    
     const [isSubmited, setSubmited] = useState(false)
     const [error, setError] = useState('');
 
@@ -22,18 +25,24 @@ function Create() {
         handleValidation();
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
     
         if (!handleValidation())
             return;
 
-        firebase.firestore().collection('questions').doc().set(question);
-        setSubmited(true);
+        await firebase.firestore().collection('questionss')
+            .doc()
+            .set(question)
+            .then(
+                setSubmited(true)
+            ).catch(
+                console.log('Error submiting question to the database.')
+            );
     }
 
     const handleValidation = () => {
         if(!question["title"] || !question["correctAnswer"] || !question["otherAnswer1"] || !question["otherAnswer2"] || !question["otherAnswer3"]){
-            setError("All fields must be filled before submiting the question")
+            setError("All fields must be filled before submiting the question.")
             return false;
         }
 
@@ -44,7 +53,10 @@ function Create() {
     const renderNewQuestionForm = () => {
         return(
             <div>
-            <h1>Create Question Page</h1>
+            <h1 className="display-2 my-2">Create Question Page</h1>
+            <div>
+                <img src={question['imgUrl']} />
+            </div>
             <Form>
                 <Form.Control name="title" onChange={handleChange} className="my-2" placeholder="Question title" required/>
                 <Form.Control name="correctAnswer" onChange={handleChange} className="my-2" placeholder="Correct answer" required/>
@@ -52,8 +64,13 @@ function Create() {
                 <Form.Control name="otherAnswer2" onChange={handleChange} className="my-2" placeholder="Other answer 2" required/>
                 <Form.Control name="otherAnswer3" onChange={handleChange} className="my-2" placeholder="Other answer 3" required/>
                 <span style={{color: "red"}}>{error}</span>
+
+                <Form.Control name="imgUrl" onChange={handleChange} className="my-4" placeholder="Image Url" required/>
             </Form>
-            <Button onClick={handleSubmit} className="my-2" disabled={error ? true : false} >Submit</Button> <br />
+            <Button onClick={handleSubmit} className="my-2" disabled={error ? true : false} >Submit</Button>
+            <Link href="/admin">
+                <Button className="m-2 btn-secondary" >Back</Button>
+            </Link>   
         </div>
         )
     }
@@ -66,9 +83,7 @@ function Create() {
 
     return(
         <Auth>
-            <Container>
-                {!isSubmited ? renderNewQuestionForm() : renderSubmitedConfirm()}
-            </Container>
+            {!isSubmited ? renderNewQuestionForm() : renderSubmitedConfirm()}
         </Auth>
     )
 }

@@ -23,6 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
 
 
 
@@ -31,6 +32,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\components\\auth.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
 
 
 
@@ -99,19 +101,19 @@ var Auth = /*#__PURE__*/function (_Component) {
         return __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 54
           },
           __self: this
         }, __jsx("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 55
           },
           __self: this
         }, "My App"), __jsx("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 56
           },
           __self: this
         }, "Please sign-in:"), __jsx(react_firebaseui_StyledFirebaseAuth__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -119,7 +121,7 @@ var Auth = /*#__PURE__*/function (_Component) {
           firebaseAuth: _components_firebase__WEBPACK_IMPORTED_MODULE_7__["default"].auth(),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 57
           },
           __self: this
         }));
@@ -128,52 +130,98 @@ var Auth = /*#__PURE__*/function (_Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 62
         },
         __self: this
       }, __jsx("link", {
         rel: "stylesheet",
-        href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }), __jsx("h1", {
+        href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+        integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+        crossorigin: "anonymous",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 63
         },
         __self: this
-      }, "My App"), __jsx("p", {
+      }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Navbar"], {
+        bg: "light",
+        variant: "light",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 70
         },
         __self: this
-      }, "Welcome ", _components_firebase__WEBPACK_IMPORTED_MODULE_7__["default"].auth().currentUser.email, "! You are now signed-in!"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Container"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 72
+        },
+        __self: this
+      }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Navbar"].Brand, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }, "Quiz App")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Nav"], {
+        className: "ml-auto",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Nav"].Link, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Nav"].Link, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
         },
         __self: this
       }, __jsx("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      }, "Home")), this.props.children, __jsx("a", {
+        className: "m-2",
         onClick: function onClick() {
           return _components_firebase__WEBPACK_IMPORTED_MODULE_7__["default"].auth().signOut();
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 83
         },
         __self: this
-      }, "Sign-out"));
+      }, "Sign-out")))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Container"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }, this.props.children));
     }
   }]);
 
@@ -75209,12 +75257,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/auth */ "./components/auth.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
-/* harmony import */ var _components_firebase__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/firebase */ "./components/firebase.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_auth__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/auth */ "./components/auth.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js");
+/* harmony import */ var _components_firebase__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/firebase */ "./components/firebase.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_12__);
+
 
 
 
@@ -75224,11 +75277,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\pages\\admin\\create.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
+
 
 
 
@@ -75236,8 +75290,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 function Create() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])({
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
     title: '',
+    imgUrl: '',
     correctAnswer: '',
     otherAnswer1: '',
     otherAnswer2: '',
@@ -75246,28 +75301,46 @@ function Create() {
       question = _useState[0],
       setQuestion = _useState[1];
 
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(false),
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false),
       isSubmited = _useState2[0],
       setSubmited = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(''),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(''),
       error = _useState3[0],
       setError = _useState3[1];
 
   var handleChange = function handleChange(e) {
-    setQuestion(_objectSpread({}, question, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])({}, e.target.name, e.target.value)));
+    setQuestion(_objectSpread({}, question, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])({}, e.target.name, e.target.value)));
     handleValidation();
   };
 
   var handleSubmit = function handleSubmit(e) {
-    if (!handleValidation()) return;
-    _components_firebase__WEBPACK_IMPORTED_MODULE_10__["default"].firestore().collection('questions').doc().set(question);
-    setSubmited(true);
+    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.async(function handleSubmit$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            if (handleValidation()) {
+              _context.next = 2;
+              break;
+            }
+
+            return _context.abrupt("return");
+
+          case 2:
+            _context.next = 4;
+            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.awrap(_components_firebase__WEBPACK_IMPORTED_MODULE_11__["default"].firestore().collection('questionss').doc().set(question).then(setSubmited(true))["catch"](console.log('Error submiting question to the database.')));
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    });
   };
 
   var handleValidation = function handleValidation() {
     if (!question["title"] || !question["correctAnswer"] || !question["otherAnswer1"] || !question["otherAnswer2"] || !question["otherAnswer3"]) {
-      setError("All fields must be filled before submiting the question");
+      setError("All fields must be filled before submiting the question.");
       return false;
     }
 
@@ -75279,22 +75352,36 @@ function Create() {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 55
       },
       __self: this
     }, __jsx("h1", {
+      className: "display-2 my-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 56
       },
       __self: this
-    }, "Create Question Page"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Form"], {
+    }, "Create Question Page"), __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 57
       },
       __self: this
-    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Form"].Control, {
+    }, __jsx("img", {
+      src: question['imgUrl'],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Form"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Form"].Control, {
       name: "title",
       onChange: handleChange,
       className: "my-2",
@@ -75302,10 +75389,10 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 61
       },
       __self: this
-    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Form"].Control, {
+    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Form"].Control, {
       name: "correctAnswer",
       onChange: handleChange,
       className: "my-2",
@@ -75313,10 +75400,10 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 62
       },
       __self: this
-    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Form"].Control, {
+    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Form"].Control, {
       name: "otherAnswer1",
       onChange: handleChange,
       className: "my-2",
@@ -75324,10 +75411,10 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 63
       },
       __self: this
-    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Form"].Control, {
+    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Form"].Control, {
       name: "otherAnswer2",
       onChange: handleChange,
       className: "my-2",
@@ -75335,10 +75422,10 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 64
       },
       __self: this
-    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Form"].Control, {
+    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Form"].Control, {
       name: "otherAnswer3",
       onChange: handleChange,
       className: "my-2",
@@ -75346,7 +75433,7 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 65
       },
       __self: this
     }), __jsx("span", {
@@ -75355,50 +75442,63 @@ function Create() {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 66
       },
       __self: this
-    }, error)), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
+    }, error), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Form"].Control, {
+      name: "imgUrl",
+      onChange: handleChange,
+      className: "my-4",
+      placeholder: "Image Url",
+      required: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
       onClick: handleSubmit,
       className: "my-2",
       disabled: error ? true : false,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 70
       },
       __self: this
-    }, "Submit"), " ", __jsx("br", {
+    }, "Submit"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
+      href: "/admin",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 71
       },
       __self: this
-    }));
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      className: "m-2 btn-secondary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }, "Back")));
   };
 
   var renderSubmitedConfirm = function renderSubmitedConfirm() {
     return __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 80
       },
       __self: this
     }, "SUBMITED");
   };
 
-  return __jsx(_components_auth__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  return __jsx(_components_auth__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 85
     },
     __self: this
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Container"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, !isSubmited ? renderNewQuestionForm() : renderSubmitedConfirm()));
+  }, !isSubmited ? renderNewQuestionForm() : renderSubmitedConfirm());
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Create);

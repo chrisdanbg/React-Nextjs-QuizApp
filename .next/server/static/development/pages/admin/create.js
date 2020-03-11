@@ -111,9 +111,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\components\\auth.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -167,19 +170,19 @@ class Auth extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 54
         },
         __self: this
       }, __jsx("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 55
         },
         __self: this
       }, "My App"), __jsx("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 56
         },
         __self: this
       }, "Please sign-in:"), __jsx(react_firebaseui_StyledFirebaseAuth__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -187,7 +190,7 @@ class Auth extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         firebaseAuth: _components_firebase__WEBPACK_IMPORTED_MODULE_2__["default"].auth(),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 57
         },
         __self: this
       }));
@@ -196,50 +199,96 @@ class Auth extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 62
       },
       __self: this
     }, __jsx("link", {
       rel: "stylesheet",
-      href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62
-      },
-      __self: this
-    }), __jsx("h1", {
+      href: "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+      integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
+      crossorigin: "anonymous",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 63
       },
       __self: this
-    }, "My App"), __jsx("p", {
+    }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Navbar"], {
+      bg: "light",
+      variant: "light",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 70
       },
       __self: this
-    }, "Welcome ", _components_firebase__WEBPACK_IMPORTED_MODULE_2__["default"].auth().currentUser.email, "! You are now signed-in!"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Container"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
       href: "/",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 72
+      },
+      __self: this
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Navbar"].Brand, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 73
+      },
+      __self: this
+    }, "Quiz App")), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Nav"], {
+      className: "ml-auto",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
+      },
+      __self: this
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: this
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Nav"].Link, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      href: "/",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81
+      },
+      __self: this
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Nav"].Link, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82
       },
       __self: this
     }, __jsx("a", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66
-      },
-      __self: this
-    }, "Home")), this.props.children, __jsx("a", {
+      className: "m-2",
       onClick: () => _components_firebase__WEBPACK_IMPORTED_MODULE_2__["default"].auth().signOut(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 83
       },
       __self: this
-    }, "Sign-out"));
+    }, "Sign-out")))))), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["Container"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90
+      },
+      __self: this
+    }, this.props.children));
   }
 
 }
@@ -1990,6 +2039,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "react-bootstrap");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_firebase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/firebase */ "./components/firebase.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\pages\\admin\\create.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2005,12 +2056,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 function Create() {
   const {
     0: question,
     1: setQuestion
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     title: '',
+    imgUrl: '',
     correctAnswer: '',
     otherAnswer1: '',
     otherAnswer2: '',
@@ -2032,15 +2085,14 @@ function Create() {
     handleValidation();
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     if (!handleValidation()) return;
-    _components_firebase__WEBPACK_IMPORTED_MODULE_3__["default"].firestore().collection('questions').doc().set(question);
-    setSubmited(true);
+    await _components_firebase__WEBPACK_IMPORTED_MODULE_3__["default"].firestore().collection('questionss').doc().set(question).then(setSubmited(true)).catch(console.log('Error submiting question to the database.'));
   };
 
   const handleValidation = () => {
     if (!question["title"] || !question["correctAnswer"] || !question["otherAnswer1"] || !question["otherAnswer2"] || !question["otherAnswer3"]) {
-      setError("All fields must be filled before submiting the question");
+      setError("All fields must be filled before submiting the question.");
       return false;
     }
 
@@ -2052,19 +2104,33 @@ function Create() {
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 55
       },
       __self: this
     }, __jsx("h1", {
+      className: "display-2 my-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 56
       },
       __self: this
-    }, "Create Question Page"), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+    }, "Create Question Page"), __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 57
+      },
+      __self: this
+    }, __jsx("img", {
+      src: question['imgUrl'],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
       },
       __self: this
     }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -2075,7 +2141,7 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 61
       },
       __self: this
     }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -2086,7 +2152,7 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 62
       },
       __self: this
     }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -2097,7 +2163,7 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 63
       },
       __self: this
     }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -2108,7 +2174,7 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 64
       },
       __self: this
     }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
@@ -2119,7 +2185,7 @@ function Create() {
       required: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 65
       },
       __self: this
     }), __jsx("span", {
@@ -2128,32 +2194,51 @@ function Create() {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 66
       },
       __self: this
-    }, error)), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+    }, error), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Form"].Control, {
+      name: "imgUrl",
+      onChange: handleChange,
+      className: "my-4",
+      placeholder: "Image Url",
+      required: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    })), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
       onClick: handleSubmit,
       className: "my-2",
       disabled: error ? true : false,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 70
       },
       __self: this
-    }, "Submit"), " ", __jsx("br", {
+    }, "Submit"), __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      href: "/admin",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 71
       },
       __self: this
-    }));
+    }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      className: "m-2 btn-secondary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }, "Back")));
   };
 
   const renderSubmitedConfirm = () => {
     return __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 80
       },
       __self: this
     }, "SUBMITED");
@@ -2162,16 +2247,10 @@ function Create() {
   return __jsx(_components_auth__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 85
     },
     __self: this
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, !isSubmited ? renderNewQuestionForm() : renderSubmitedConfirm()));
+  }, !isSubmited ? renderNewQuestionForm() : renderSubmitedConfirm());
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Create);

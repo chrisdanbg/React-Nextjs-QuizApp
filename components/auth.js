@@ -3,6 +3,7 @@ import firebase from '../components/firebase';
 import fb from 'firebase'
 import { Component } from 'react';
 import Link from 'next/link';
+import {Container, Navbar, NavbarBrand, Nav, NavDropdown} from 'react-bootstrap';
 
 // Configure FirebaseUI.
 const uiConfig = {
@@ -59,14 +60,36 @@ class Auth extends Component {
     }
     return (
       <div>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
-        <h1>My App</h1>
-        <p>Welcome {firebase.auth().currentUser.email}! You are now signed-in!</p>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        {this.props.children}
-        <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+          <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
+        
+        <Navbar bg='light' variant="light">
+          <Container>
+            <Link href="/">
+              <Navbar.Brand href="/">
+                  Quiz App
+              </Navbar.Brand>
+            </Link>
+            <Nav className="ml-auto">
+              <Link href="/">
+                <Nav.Link href="/">Home</Nav.Link>
+              </Link>
+              <Link href="/">
+                <Nav.Link> 
+                  <a className="m-2" onClick={() => firebase.auth().signOut()}>Sign-out</a>
+                </Nav.Link>
+              </Link>
+            </Nav>
+          </Container>
+        </Navbar>
+
+        <Container>
+          {this.props.children}
+        </Container>
       </div>
     );
   }
