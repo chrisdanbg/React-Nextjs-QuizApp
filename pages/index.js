@@ -3,6 +3,7 @@ import { Component } from "react";
 import Quiz from '../components/quiz';
 import Result from '../components/result';
 import firebase from '../components/firebase';
+import Auth from '../components/auth';
 
 import Link from 'next/link'
 
@@ -24,6 +25,8 @@ class Index extends Component {
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     }
     componentDidMount() {
+        console.log(firebase.auth.currentUser)
+
         let getData = firebase.firestore().collection('questions').get()
         .then(snapshot => { 
             snapshot.forEach((doc) => {
@@ -68,8 +71,6 @@ class Index extends Component {
             },
             answer: answer
         }))
-        console.log(answer)
-        console.log(this.state.answersCount);
     }
 
     setNextQestion() {
@@ -135,12 +136,9 @@ class Index extends Component {
        return( 
             <div className="App">
                 <div className="App-Header">
-                    <h2>React Quiz</h2>
-                    <Link href="/login">
-                        <button>Login</button>
-                    </Link>
+                    <h2>React Quiz</h2>                       
                 </div>
-               { this.state.result ? this.renderResult() : this.renderQuiz()}
+            { this.state.result ? this.renderResult() : this.renderQuiz()}
             </div>
         );
     }
