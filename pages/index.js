@@ -22,8 +22,7 @@ class Index extends Component {
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     }
     componentDidMount() {
-
-        let getData = firebase.firestore().collection('questions').get()
+        firebase.firestore().collection('questions').get()
         .then(snapshot => { 
             snapshot.forEach((doc) => {
                 quizQuestions.push(doc.data());
@@ -84,22 +83,11 @@ class Index extends Component {
     }
 
     setResults(result) {
-        if (result.length === 1) {
-            this.setState({result: result[0]});
-        } else {
-            this.setState({result: 'Undetermined'});
-        }
+        this.setState({result: `You have answered ${result} questions correctlly`});
     }
 
     getResults() {
-        // const answersCount = this.state.answersCount;
-        // const answerCountKeys = Object.keys(answersCount)
-        // const answerCountValues = answerCountKeys.map((key) => answersCount[key]);
-
-        // const maxAnswerCount = Math.max.apply(null, answerCountValues);
-
-        // return answerCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
-        return 1
+       return this.state.correctAnswers;
     }
 
     handleAnswerSelected(event) {

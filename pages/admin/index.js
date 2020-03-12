@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
  
 import Auth from '../../components/auth';
 import firebase from '../../components/firebase';
+import DataTable from "../../components/datatable";
 
 class AdminPanel extends Component {
     constructor(props) {
@@ -29,23 +30,14 @@ class AdminPanel extends Component {
         return { questions: questionsList }
     }
 
-    renderQuestions(key) {
-        console.log(key)
-        return(
-          <div>
-              <h1>{key.title}</h1>
-              <img src={key.image}></img>
-          </div>
-        );
-    }
-
     render() {
         return(
             <Auth>
-                {this.props.questions.map(this.renderQuestions)}
-                <br />
+                <h2 className="display-4 my-3">Available quesitons</h2>
+                <hr></hr>
+                <DataTable content={this.props.questions}/>
                 <Link href='/admin/create'>
-                    <Button className="my-2">Create Question</Button>
+                    <Button className="mt-5 float-right">Create Question</Button>
                 </Link>
             </Auth>
         );

@@ -8,10 +8,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/Admin": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js",
@@ -24,6 +20,14 @@
     "/_polyfills": [
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
+    ],
+    "/admin": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/admin/create": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/index": [
       "static/runtime/webpack.js",
