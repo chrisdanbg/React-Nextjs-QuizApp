@@ -1,8 +1,9 @@
 const webpack = require('webpack');
+const withImages = require('next-images');
 const withCSS = require('@zeit/next-css')
 require('dotenv').config();
 
-module.exports = {
+module.exports = withCSS(withImages({
   webpack: config => {
     const env = Object.keys(process.env).reduce((acc, curr) => {
       acc[`process.env.${curr}`] = JSON.stringify(process.env[curr]);
@@ -13,5 +14,4 @@ module.exports = {
 
     return config;
   },
-  withCSS
-};
+}))

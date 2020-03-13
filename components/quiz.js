@@ -2,8 +2,17 @@ import PropTypes from 'prop-types';
 import QuestionCount from './questionCount';
 import Question from './question';
 import AnswerOption from './answerOption';
+import {useSpring, animated, config} from 'react-spring'
+
 
 function Quiz(props) {
+
+    const animatedStyle = useSpring({
+        from: { opacity: 0, transform: 'translateY(200px)' },
+        to: { opacity: 1, transform: 'translateY(0)' },
+        config: config.gentle
+    })
+
     function renderAnswerOptions(key) {
         return(
             <AnswerOption
@@ -19,7 +28,7 @@ function Quiz(props) {
 
 
     return(
-        <div className="quiz">
+        <animated.div style={animatedStyle} className="quiz">
             <QuestionCount
                 counter={props.questionId}
                 total={props.questionTotal}
@@ -28,14 +37,20 @@ function Quiz(props) {
             <ul className="answerOptions">
                 {props.answerOptions.map(renderAnswerOptions)}
             </ul>
-        </div>
+            <style jsx>{`
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+            `}</style>
+        </animated.div>
     );
 }
 
 Quiz.propTypes = {
     image: PropTypes.string.isRequired,
     answer: PropTypes.string.isRequired,
-    answerOptions: PropTypes.array.isRequired,
+     answerOptions: PropTypes.array.isRequired,
     counter: PropTypes.number.isRequired,
     question: PropTypes.string.isRequired,
     questionId: PropTypes.number.isRequired,

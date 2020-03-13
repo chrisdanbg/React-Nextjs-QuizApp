@@ -2,9 +2,20 @@ import PropTypes from 'prop-types';
 
 function Question(props) {
     return(
-        <div>
-            <img src={props.image}></img>
-            <h2 className="question">{props.content}</h2>
+        <div className="text-center">
+            <img className="image" src={props.image}></img>
+            <h2 className="question my-4">{props.content}</h2>
+            <style jsx>{`
+                .image {
+                    max-width: 350px;
+                    border: 1px solid #eee;
+                    border-radius: 25px;
+                    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+                }
+                .question {
+                    font-size: 55px;
+                }
+            `}</style>
         </div>
     )
 }

@@ -3,6 +3,8 @@ import { Component } from "react";
 import Quiz from '../components/quiz';
 import Result from '../components/result';
 import firebase from '../components/firebase';
+import StartGame from "../components/startGame";
+import { Row, Col } from "react-bootstrap";
 
 let quizQuestions = [];
 class Index extends Component {
@@ -16,9 +18,11 @@ class Index extends Component {
             answerOptions: [],
             answer: '',
             result: '',
-            correctAnswers: 0
+            correctAnswers: 0,
+            isStarted: false,
         };
 
+        this.startGame = this.startGame.bind(this);
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     }
     componentDidMount() {
@@ -100,16 +104,23 @@ class Index extends Component {
     }
 
     renderQuiz() {
+
         return (
-            <Quiz
-                answer={this.state.answer}
-                answerOptions={this.state.answerOptions}
-                questionId={this.state.questionId}
-                question={this.state.question}
-                questionTotal={quizQuestions.length}
-                onAnswerSelected={this.handleAnswerSelected}
-                image={this.state.image}
-            />
+                <Quiz
+                    answer={this.state.answer}
+                    answerOptions={this.state.answerOptions}
+                    questionId={this.state.questionId}
+                    question={this.state.question}
+                    questionTotal={quizQuestions.length}
+                    onAnswerSelected={this.handleAnswerSelected}
+                    image={this.state.image}
+                />
+        )
+    }
+
+    renderStartPanel() {
+        return(
+            <StartGame onGameStarted={this.startGame}/>
         )
     }
 
@@ -119,14 +130,30 @@ class Index extends Component {
         );
     }
 
+    startGame() {
+        this.setState({isStarted: true});
+    }
+
     render() {
        return( 
-            <div className="App">
-                <div className="App-Header">
-                    <h2>React Quiz</h2>                       
-                </div>
-            { this.state.result ? this.renderResult() : this.renderQuiz()}
-            </div>
+           <div className="full-screen">
+             <Row className="h-100">
+                <Col className="my-auto">
+                {this.state.isStarted ? this.renderQuiz() : this.renderStartPanel()}
+                </Col>
+            </Row>
+                <style jsx>{`
+                    body {
+                        position: relative;
+                    }
+                    .full-screen {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                `}</style>
+           </div>
         );
     }
 }
