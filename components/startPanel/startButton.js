@@ -9,9 +9,17 @@ function StartButton(props) {
         config: config.gentle
     })
 
+    const handleClick = () => {
+        if (props.onGameStarted) {
+            props.onGameStarted()
+        } else if (props.onShowModal) {
+            props.onShowModal()
+        }
+    }
+
     return(
         <animated.div style={animatedStyle}>
-        <button onClick={props.onGameStarted} className="btn my-3">{props.text}</button>
+        <button onClick={handleClick} className="btn my-3">{props.text}</button>
             <style jsx>{`
                 .btn {
                     color:white;
