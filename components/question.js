@@ -6,6 +6,9 @@ function Question(props) {
 			<img className="image" src={props.image}></img>
 			<h2 className="question my-4">{props.content}</h2>
 			<style jsx>{`
+				h2 {
+					color: #fda7df;
+				}
 				.image {
 					max-width: 350px;
 					border: 1px solid #eee;

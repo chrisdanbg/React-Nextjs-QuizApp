@@ -19,7 +19,9 @@ class Index extends Component {
 			result: "",
 			correctAnswers: 0,
 			isStarted: false,
-			isFinished: false
+			isFinished: false,
+			isAnswered: false,
+			hasAward: false,
 		};
 
 		this.startGame = this.startGame.bind(this);
@@ -88,14 +90,22 @@ class Index extends Component {
 			question: quizQuestions[counter].question,
 			image: quizQuestions[counter].image,
 			answerOptions: quizQuestions[counter].answers,
-			answer: ""
+			answer: "",
+			isAnswered: false
 		});
 	}
 
 	setResults(result) {
-		this.setState({
-			result: `You have answered ${result} questions correctlly`
-		});
+		if (result === quizQuestions.length) {
+			this.setState({
+				result: `Ти орговори правилно на ${result} от ${quizQuestions.length} въпроса!`,
+				hasAward: true
+			});
+		} else {
+			this.setState({
+				result: "За съжаление не събра нужния резултат. Опитай пак!",
+			});
+		}
 	}
 
 	getResults() {
@@ -103,6 +113,7 @@ class Index extends Component {
 	}
 
 	handleAnswerSelected(event) {
+		this.setState({isAnswered : true});
 		this.setUserAnswer(event.currentTarget.value);
 		if (this.state.questionId < quizQuestions.length) {
 			setTimeout(() => this.setNextQestion(), 300);
@@ -111,7 +122,7 @@ class Index extends Component {
 			this.setState({ isFinished: true });
 		}
 	}
-	ren() {
+	renderQuestions() {
 		return (
 			<Quiz
 				answer={this.state.answer}
@@ -127,7 +138,7 @@ class Index extends Component {
 	}
 	renderQuiz() {
 		return (
-			<div>{this.state.isFinished ? this.renderResult() : this.ren()}</div>
+			<div>{this.state.isFinished ? this.renderResult() : this.renderQuestions()}</div>
 		);
 	}
 
@@ -136,7 +147,7 @@ class Index extends Component {
 	}
 
 	renderResult() {
-		return <Result quizResult={this.state.result} />;
+		return <Result quizResult={this.state.result} hasAward={this.state.hasAward}/>;
 	}
 
 	startGame() {

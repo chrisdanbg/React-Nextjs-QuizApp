@@ -1,9 +1,11 @@
 import Table from 'rc-table'
+import { Button } from 'react-bootstrap';
 
 function DataTable(props) {
 
     const createDataTableObject = (key) => {
         return {
+            key: key.id,
             title: key.title,
             image: key.image,
             correctAnswer: key.answers[0].content
@@ -36,9 +38,9 @@ function DataTable(props) {
         },
         {
           title: 'Operations',
-          dataIndex: '',
-          key: 'operations',
-          render: () => <a href="#">Delete</a>,
+          dataIndex: 'key',
+          key: 'key',
+          render: (key) => <Button variant="danger" className='my-4' value={key} onClick={props.handleDelete}>Delete</Button>,
         },
       ];
 

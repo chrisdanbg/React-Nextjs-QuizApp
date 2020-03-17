@@ -119,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Kristiyan\\Desktop\\React-Nextjs-QuizApp\\pages\\_app.js";
+var _jsxFileName = "C:\\Users\\Kristiyan\\Documents\\React-Nextjs-QuizApp\\pages\\_app.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
@@ -133,23 +133,23 @@ function MyApp({
   pageProps
 }) {
   return __jsx("div", {
-    className: "jsx-1837884328",
+    className: "jsx-3035120545",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, __jsx(Component, _extends({}, pageProps, {
-    className: "jsx-1837884328" + " " + (pageProps && pageProps.className != null && pageProps.className || ""),
+    className: "jsx-3035120545" + " " + (pageProps && pageProps.className != null && pageProps.className || ""),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
   })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "1837884328",
+    id: "3035120545",
     __self: this
-  }, "body{background-color:#f2f2f7;color:#FDA7DF;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcS3Jpc3RpeWFuXFxEZXNrdG9wXFxSZWFjdC1OZXh0anMtUXVpekFwcFxccGFnZXNcXF9hcHAuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBTW1DLEFBR2tELHlCQUNYLGNBQ2xCIiwiZmlsZSI6IkM6XFxVc2Vyc1xcS3Jpc3RpeWFuXFxEZXNrdG9wXFxSZWFjdC1OZXh0anMtUXVpekFwcFxccGFnZXNcXF9hcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJ2Jvb3RzdHJhcC9kaXN0L2Nzcy9ib290c3RyYXAubWluLmNzcyc7XHJcblxyXG5mdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH0pIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxyXG4gICAgICAgICAgICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcclxuICAgICAgICAgICAgICAgICAgICBib2R5IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2YyZjJmNztcclxuICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6ICNGREE3REY7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgYH08L3N0eWxlPlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApXHJcbn1cclxuXHJcbmV4cG9ydCBkZWZhdWx0IE15QXBwIl19 */\n/*@ sourceURL=C:\\\\Users\\\\Kristiyan\\\\Desktop\\\\React-Nextjs-QuizApp\\\\pages\\\\_app.js */"));
+  }, "body{background-color:#f2f2f7;}h1{font-size:55px;color:white;}.result{width:500px;color:white;background-color:#fda7df;border:1px solid #eee;border-radius:15px;box-shadow:0 5px 15px -5px rgba(0,0,0,0.1);}Confetti{position:absolute;bottom:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcS3Jpc3RpeWFuXFxEb2N1bWVudHNcXFJlYWN0LU5leHRqcy1RdWl6QXBwXFxwYWdlc1xcX2FwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNc0IsQUFHK0IsQUFHVixBQUlZLEFBUVQsWUFQTixHQUpBLEdBWUgsTUFQZ0IsQ0FSMUIsRUFJQSxBQVlBLHNCQVB1QixzQkFDSCxtQkFDMkIsMkNBQy9DIiwiZmlsZSI6IkM6XFxVc2Vyc1xcS3Jpc3RpeWFuXFxEb2N1bWVudHNcXFJlYWN0LU5leHRqcy1RdWl6QXBwXFxwYWdlc1xcX2FwcC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBcImJvb3RzdHJhcC9kaXN0L2Nzcy9ib290c3RyYXAubWluLmNzc1wiO1xyXG5cclxuZnVuY3Rpb24gTXlBcHAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9KSB7XHJcblx0cmV0dXJuIChcclxuXHRcdDxkaXY+XHJcblx0XHRcdDxDb21wb25lbnQgey4uLnBhZ2VQcm9wc30gLz5cclxuXHRcdFx0PHN0eWxlIGpzeCBnbG9iYWw+e2BcclxuXHRcdFx0XHRib2R5IHtcclxuXHRcdFx0XHRcdGJhY2tncm91bmQtY29sb3I6ICNmMmYyZjc7XHJcblx0XHRcdFx0fVxyXG5cdFx0XHRcdGgxIHtcclxuXHRcdFx0XHRcdGZvbnQtc2l6ZTogNTVweDtcclxuXHRcdFx0XHRcdGNvbG9yOiB3aGl0ZTtcclxuXHRcdFx0XHR9XHJcblx0XHRcdFx0LnJlc3VsdCB7XHJcbiAgICAgICAgICAgICAgICAgICAgd2lkdGg6IDUwMHB4O1xyXG5cdFx0XHRcdFx0Y29sb3I6IHdoaXRlO1xyXG5cdFx0XHRcdFx0YmFja2dyb3VuZC1jb2xvcjogI2ZkYTdkZjtcclxuXHRcdFx0XHRcdGJvcmRlcjogMXB4IHNvbGlkICNlZWU7XHJcblx0XHRcdFx0XHRib3JkZXItcmFkaXVzOiAxNXB4O1xyXG5cdFx0XHRcdFx0Ym94LXNoYWRvdzogMCA1cHggMTVweCAtNXB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcclxuXHRcdFx0XHR9XHJcblx0XHRcdFx0Q29uZmV0dGkge1xyXG5cdFx0XHRcdFx0cG9zaXRpb246IGFic29sdXRlO1xyXG5cdFx0XHRcdFx0Ym90dG9tOiAwO1xyXG5cdFx0XHRcdH1cclxuXHRcdFx0YH08L3N0eWxlPlxyXG5cdFx0PC9kaXY+XHJcblx0KTtcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgTXlBcHA7XHJcbiJdfQ== */\n/*@ sourceURL=C:\\\\Users\\\\Kristiyan\\\\Documents\\\\React-Nextjs-QuizApp\\\\pages\\\\_app.js */"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);

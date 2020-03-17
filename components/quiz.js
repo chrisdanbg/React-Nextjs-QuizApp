@@ -4,14 +4,13 @@ import Question from './question';
 import AnswerOption from './answerOption';
 import {useSpring, animated, config} from 'react-spring'
 
-
 function Quiz(props) {
-
     const animatedStyle = useSpring({
         from: { opacity: 0, transform: 'translateY(200px)' },
-        to: { opacity: 1, transform: 'translateY(0)' },
+        to: { opacity: 1, transform: props.isAnswered ? 'translateX(-1500px)' : 'translateX(0)' },
         config: config.gentle
     })
+
 
     function renderAnswerOptions(key) {
         return(
