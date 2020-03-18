@@ -4,6 +4,7 @@ import Result from "../components/result";
 import firebase from "../components/firebase";
 import StartGame from "../components/startGame";
 import { Row, Col } from "react-bootstrap";
+import ParallaxBackground from "../components/parallaxBackground";
 
 let quizQuestions = [];
 class Index extends Component {
@@ -156,6 +157,7 @@ class Index extends Component {
 
 	render() {
 		return (
+			<ParallaxBackground>
 			<div className="full-screen">
 				<Row className="h-100">
 					<Col className="my-auto">
@@ -173,7 +175,9 @@ class Index extends Component {
 						transform: translate(-50%, -50%);
 					}
 				`}</style>
+			
 			</div>
+			</ParallaxBackground>
 		);
 	}
 }
